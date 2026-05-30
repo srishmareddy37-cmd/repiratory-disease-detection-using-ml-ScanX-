@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Respiratory Disease Detection</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/style.css') }}">
+</head>
+<body>
+    <div class="container">
+        <h1>Respiratory Disease Detection</h1>
+        <form action="/" method="POST" enctype="multipart/form-data">
+            <div class="mb-3">
+                <input class="form-control" type="file" name="image" accept="image/*" required>
+            </div>
+            <button type="submit" class="btn btn-primary w-100">Upload & Predict</button>
+        </form>
+
+        {% if prediction %}
+        <div class="result">
+            <h3 class="text-success">Prediction: {{ prediction }}</h3>
+            <p>Confidence: {{ confidence }}%</p>
+            <img src="{{ image_path }}" class="prediction-img" alt="Uploaded Image">
+        </div>
+        {% endif %}
+    </div>
+</body>
+</html>

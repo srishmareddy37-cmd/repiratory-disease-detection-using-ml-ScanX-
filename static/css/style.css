@@ -1,0 +1,36 @@
+body {
+    background: linear-gradient(to right, #6dd5fa, #ffffff);
+    font-family: 'Arial', sans-serif;
+}
+
+.container {
+    max-width: 600px;
+    margin: 60px auto;
+    background: #ffffff;
+    padding: 30px;
+    border-radius: 20px;
+    box-shadow: 0 8px 20px rgba(0,0,0,0.2);
+}
+
+h1 {
+    color: #007bff;
+    text-align: center;
+    margin-bottom: 30px;
+}
+
+.btn-primary {
+    background-color: #007bff;
+    border: none;
+}
+
+.result {
+    margin-top: 25px;
+    text-align: center;
+}
+
+.prediction-img {
+    margin-top: 15px;
+    border-radius: 15px;
+    max-width: 100%;
+    height: auto;
+}
